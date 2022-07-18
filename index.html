@@ -4,62 +4,71 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!--Open Graph Related Stuff-->
-    <meta property="og:title" content="Visual Question Answering" />
-    <meta property="og:url" content="http://visualqa.org" />
-    <meta property="og:description" content="" />
-    <meta property="og:site_name" content="Visual Question Answering" />
-    <meta property="og:image" content="http://visualqa.org/static/img/fb_challenge_2.jpg" />
-    <meta property="og:image:url" content="http://visualqa.org/static/img/fb_challenge_2.jpg" />
+    <meta property="og:title" content="Workshop on Computer Vision in the Wild 2022" />
+    <meta property="og:url" content="http://visualqa.org/workshop.html" />
+    <meta property="og:description" content="October 23 at ECCV 2022" />
+    <meta property="og:description" content="ECCV 2022" />
+    <meta property="og:site_name" content="Computer Vision in the Wild 2022" />
+    <meta property="og:image" content="http://visualqa.org/static/img/vqa_facebook_teaser_v4_jpg_100.jpg" />
+    <meta property="og:image:url" content="http://visualqa.org/static/img/vqa_facebook_teaser_v4_jpg_100.jpg" />
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Visual Question Answering">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="http://visualqa.org/static/img/twitter_challenge_2.jpg">
-    <!-- <meta name="twitter:image" content="http://visualqa.org/static/img/fb_challenge_2.jpg"> -->
+    <meta name="twitter:title" content="Workshop on Computer Vision in the Wild 2022">
+    <meta name="twitter:description" content="October 23 at ECCV 2022">
+    <meta name="twitter:description" content="CVPR 2022">
+    <meta name="twitter:image" content="http://visualqa.org/static/img/vqa_facebook_teaser_v4_jpg_100.jpg">
     <title>VQA: Visual Question Answering</title>
     <link rel="stylesheet" href="./static/css/foundation.css">
     <link rel="stylesheet" href="./static/css/main.css">
     <script src="./static/js/vendor/jquery.js"></script>
     <script src="./static/js/jquery-2.1.3.min.js"></script>
-    <style>
-    /* For embedded YouTube videos */
 
-    .auto-resizable-iframe {
-        max-width: 640px;
-        margin: 0px auto;
-    }
+    <script type="text/javascript" src="./static/js/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="./static/js/moment.min.js"></script>
+    <script type="text/javascript" src="./static/js/moment-timezone-with-data.min.js"></script>
 
-    .auto-resizable-iframe > div {
-        position: relative;
-        padding-bottom: 25%;
-        height: 0px;
-    }
+    <script type="text/javascript" src="./static/js/main-vqa.js"></script>
+    <script type="text/javascript" src="./static/js/main-gqa.js"></script>
+    <script type="text/javascript" src="./static/js/main-visdial.js"></script>
+    <script type="text/javascript" src="./static/js/main-textvqa.js"></script>
+    <script type="text/javascript" src="./static/js/main-textcaps.js"></script>
+    <script type="text/javascript" src="./static/js/main-vizwiz.js"></script>
 
-    @media screen and (max-width: 767px) {
-        #tot {
-            display: none;
-        }
-    }
-    </style>
 </head>
+<style type="text/css">
+.schedule table {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
 
-<body class="off-canvas hide-extras" style="min-width:1200px; min-height:750px;">
+.schedule tr:hover {
+    background-color: #D3D3D3;
+}
+
+.schedule img {
+    max-height: 95px;
+    max-width: 140px;
+    margin-right: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 50%;
+}
+</style>
+
+<body class="off-canvas hide-extras" style="min-width:1300px; min-height:750px;">
     <header>
         <div class="row">
-            <a href="http://visualqa.org/"><img style="height: 100px; position:absolute; top:4px; left:0px;" src="./static/img/main.png" alt="logo" /></a>
-            <h1><img style="height: 90px;" src="./static/img/logo.png" alt="logo" /><br></h1>
+            <a href="http://visualqa.org/"><img style="height: 100px; position:absolute; top:4px; left:0px;" src="./static/eccv2022/img/ECCV-logo3.png" alt="logo" /></a>
+            <!-- <h1><img style="height: 90px;" src="./static/img/logo.png" alt="logo" /><br></h1> -->
             <br>
         </div>
     </header>
     <div class="contain-to-grid">
         <nav class="top-bar" data-topbar>
-            <ul class="title-area">
-                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a>
-                </li>
-            </ul>
             <section class="top-bar-section">
                 <!-- Right Nav Section -->
                 <ul class="right">
-                    <!-- <li class="active"><a href="index.html">Home</a></li> -->
+                    <!-- <li><a href="index.html">Home</a></li> -->
                     <!-- <li><a href="people.html">People</a></li> -->
                     <!-- <li><a href="code.html">Code</a></li> -->
                     <!-- <li><a href="http://vqa.cloudcv.org/" onClick="ga('send', 'event', { eventCategory: 'Outgoing Link', eventAction: 'Demo', eventLabel: 'Demo'});">Demo</a></li> -->
@@ -67,14 +76,15 @@
                         <!-- <ul class="dropdown"> -->
                             <!-- <li><a href="download.html">VQA v2</a></li> -->
                             <!-- <li><a href="vqa_v1_download.html">VQA v1</a></li> -->
-                        <!-- </ul> -->
-                    <!-- </li> -->
-                    <!-- <li><a href="evaluation.html">Evaluation</a></li> -->
-                    <!-- <li class="has-dropdown"><a href="challenge.html">Challenge</a> -->
-                        <!-- <ul class="dropdown"> -->
-                             <!-- <li><a href="challenge.html">2021</a></li> -->
-                            <!-- <li><a href="challenge_2020.html">2020</a></li>
-                            <li><a href="challenge_2019.html">2019</a></li><li><a href="challenge_2018.html">2018</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="evaluation.html">Evaluation</a></li>
+                    <li class="has-dropdown"><a href="challenge.html">Challenge</a>
+                        <ul class="dropdown">
+                            <li><a href="challenge.html">2021</a></li>
+                            <li><a href="challenge_2020.html">2020</a></li>
+                            <li><a href="challenge_2019.html">2019</a></li>
+                            <li><a href="challenge_2018.html">2018</a></li>
                             <li><a href="challenge_2017.html">2017</a></li>
                             <li><a href="challenge_2016.html">2016</a></li>
                         </ul>
@@ -83,396 +93,1125 @@
                         <ul class="dropdown">
                             <li><a href="http://visualqa.org/vqa_v2_teaser.html">VQA v2</a></li>
                             <li><a href="https://vqabrowser.cloudcv.org/">VQA v1</a></li>
+
                         </ul>
                     </li> -->
-                    <!-- <li class="has-dropdown"><a href="workshop.html">Workshop</a> -->
-                        <!-- <ul class="dropdown"> -->
-                            <li><a href="workshop.html">2021</a></li>
-                            <!-- ################################################################################################ -->
+                    <!-- <li><a href="http://visualqa.org/visualize/">Visualize</a></li> -->
+                    <!-- <li class="active has-dropdown"><a href="workshop.html">Workshop</a>
+                        <ul class="dropdown"> -->
+                            <li><a href="workshop.html"></a></li>
                             <!-- <li><a href="workshop_2020.html">2020</a></li>
                             <li><a href="workshop_2019.html">2019</a></li>
                             <li><a href="workshop_2018.html">2018</a></li>
                             <li><a href="workshop_2017.html">2017</a></li>
                             <li><a href="workshop_2016.html">2016</a></li> -->
-                        <!-- </ul> -->
+                        </ul>
                     </li>
                     <!-- <li><a href="sponsors.html">Sponsors</a></li> -->
                     <!-- <li><a href="terms.html">Terms</a></li> -->
                     <!-- <li><a href="external.html">External</a></li> -->
-                </ul>
+                <!-- </ul> -->
             </section>
         </nav>
     </div>
-    <section role="main">
+    <section role="main" style="padding: 1em;">
         <div class="row">
+            <p style="font-size:30px; color:black; font-weight: 50" align=center>Workshop on Computer Vision in the Wild
+                <br>
+                <span style="font-size:18px; color:gray; font-weight: 50" align=center>at ECCV 2022, October 23</span>
+                <!-- <br> -->
+                <!-- <br> -->
+                <!-- <span style="font-size:20px; color:black; font-weight: 400" align=center>Zoom and Gatherly links on ECCV 2022 website: <a target="_blank" href="https://www.eventscribe.net/2021/2021CVPR/agenda.asp?startdate=6/19/2021&enddate=6/19/2021&BCFO=M&pfp=Workshops&mode=&tn=&cpftwo=&custwo=&pta=/">Link</a> <br> Navigate to: Workshops -> Sat, October 23 -> Search for "Computer Vision in the Wild" workshop entry</b></span> -->
+
+            </p>
+
+            <!-- <table width="100%">
+                <tr>
+                    <td width=150>
+                        <center> <span style="color:gray;"><b>Ended</b></span> <br>
+                            Recording: <a target="_blank" href="https://youtu.be/L-86t1AW3z4">[Video]</a> </center>
+                    </td>
+                    <td style="padding-left:8px"><b>Panel-1: Future Directions</b>
+                      <br>Vittorio Ferrari, Damien Teney, Raquel Fernández, Aida Nematzadeh, Olga Russakovsky
+                      <br>Hosted on Zoom, joining link on the internal CVPR website
+                    </td>
+                    <td width=200>
+                        Starts June 19, 9 AM PT!
+                    </td>
+                </tr>
+                <tr>
+                    <td width=150>
+                        <center> <span style="color:gray;"><b>Ended</b></span></center>
+                    </td>
+                    <td style="padding-left:8px"><b>Live QA-1</b>
+                      <br>Individual live QA for challenge related talks and poster spotlight presenters.
+                      <br>Hosted on Gatherly, joining link on the internal CVPR website
+                    </td>
+                    <td width=200>
+                        Starts June 19, 12 PM PT!
+                    </td>
+                </tr>
+                <tr>
+                    <td width=150>
+                        <center> <span style="color:gray;"><b>Ended</b></span> <br>
+                            Recording: <a target="_blank" href="https://youtu.be/GobqvKXCVtc">[Video]</a></center>
+                    </td>
+                    <td style="padding-left:8px"><b>Panel-2: Future Directions</b>
+                      <br>Justin Johnson, He He, Mohit Bansal, Katerina Fragkiadaki, Anirudh Koul
+                      <br>Hosted on Zoom, joining link on the internal CVPR website
+                    </td>
+                    <td width=200>
+                        Starts June 19, 3 PM PT!
+                    </td>
+                </tr>
+                <tr>
+                    <td width=150>
+                    </td>
+                    <td style="padding-left:8px"><b>Live QA-2</b>
+                        <br>Individual live QA for challenge related talks and poster spotlight presenters.
+                        <br>Hosted on Gatherly, joining link on the internal CVPR website
+                      </td>
+                      <td width=200>
+                          Starts June 20, 12 AM PT!
+                      </td>
+                </tr>
+            </table>
+
+            <p style="font-size:20px; color:black; font-weight: 50" align=center>
+                <a href="workshop.html" style="padding:13px">Home</a>
+                <a href="#program" style="padding:13px">Program</a>
+                <a href="posters_2021.html" style="padding:13px">Poster Spotlights</a>
+            </p>
+            <hr>
             <div class="large-12 columns">
-                <!-- <p style="text-align: center; font-size:30px; margin-top:-20px">VQA Challenge 2019 launched!</p>
-                <p style="text-align: center; font-size:22px; margin-top:-20px">For more details, see <a href="challenge.html">challenge page</a>.</p> -->
+                <img src="./static/img/challenge.png" height="900" width="500" style="display:block; margin:auto;" frameBorder="0">
+            </div>
+        </div> -->
+        <br>
+        <br>
+
+        <div class="row">
+            <h1 style="font-size:30px; color:grey; font-weight: 200">Overview</h1>
+            <div class="large-12 columns" style="text-align:left;">
+                <p style="font-size:15px; font-weight: 400; text-align:left">
+                State-of-the-art CV systems are trained to predict a fixed set of predetermined object categories. This restricted form of supervision limits their generality and usability since additional labeled data is needed to specify any other visual concept. 
+                <br><br>
+                Recent works, such as <a href="https://openai.com/blog/clip/"> CLIP </a>, <a href="https://ai.googleblog.com/2021/05/align-scaling-up-visual-and-vision.html"> ALIGN </a> and <a href="https://arxiv.org/abs/2111.11432"> Florence </a>  for image classification, and <a href="https://arxiv.org/abs/2104.13921"> ViLD </a>, <a href="https://arxiv.org/abs/2112.09106"> RegionCLIP </a> and <a href="https://arxiv.org/abs/2112.03857"> GLIP </a> for object detection, show that learning from large-scale image-text data is a promising approach to achieve open-vocabulary CV models. These vision models with language interface also show superior zero-shot and few-shot adaption performance on various real-world tasks.
+                <br><br>
+                We propose this "Computer Vision in the Wild" workshop, aiming to gather academic and industry communities to work on CV problems in real-world scenarios, focusing on the challenge of open vocabulary vision tasks and efficient domain adaption. 
+                <br><br>
+                Since there is no established benchmarks to measure the progress of "CV in the wild", we develop two new benchmarks for: 1) classification and 2) detection, to measure the adaption efficiency of various models/methods over diverse real-world datasets. This workshop will host two challenges, based on these two benchmarks, respectively.
+                <!--  -->
+                <div class="row">
+                    <h1 style="font-size:30px; color:grey; font-weight: 200">CV in the Wild Challenges</h1>
+                    <div class="large-12 columns" style="text-align:left;">
+                        <p style="font-size:15px; font-weight: 400; text-align:left">          
+                
+                <ul style="font-size:15px;">
+                    There are two challenges associated to this workshop: "Image Classification in the Wild" (ICinW) and "Object Detection in the Wild" (ODinW). We summarize their evaluation datasets and metrics in the table below.<br><br>
+                    <li style="margin-left:30px">
+                        To prevent a race purely in pre-training data and model size, we will have two tracks in both challenges.
+                    </li>
+                    <br>
+                    <li style="margin-left:30px">
+                        For the academic track, pre-training data is limited to ImageNet21k, Objects365, CC15M, and YFCC15M
+                    </li>
+                    <br>
+
+                    <li style="margin-left:30px">
+                        For the industry track, there is no limitation on pre-training data and model size. Teams are required to disclose meta info of model and data if extra data is used.
+                    </li>
+
+                    <br>
+                    More information about the challenges are released: 
+                    <a href="https://computer-vision-in-the-wild.github.io/ELEVATER/"> [Benchmark] </a>
+                     <a href="https://arxiv.org/abs/2204.08790"> [Document] </a>.
+                          Our evaluation server will be online at late July, 2022.
+                    <br><br>
+                    Evaluation datasets and metrics for two challenges. *Pre-training data for the academic track, beyond which meta information of extra data should be disclosed.
+
+                </p>
+            </div>
+            <!-- <hr> -->
+        </div>
+<!--  -->
+<table width="100%">
+    <tr>
+        <td width=150>
+            <center> <span style="color:gray;"><b>Challenge</b></span> <br>
+                <!-- Recording: <a target="_blank" href="https://youtu.be/L-86t1AW3z4">[Video]</a> </center> -->
+        </td>
+        <td width=150>
+            <center> <span style="color:gray;"><b>Eval Datasets</b></span> <br>
+        </td>
+        <td width=150>
+            <center> <span style="color:gray;"><b>Eval Metrics</b></span> <br>
+        </td>
+        <td width=150>
+            <center> <span style="color:gray;"><b>Pretraining data*</b></span> <br>
+        </td>
+    </tr>
+    <tr>
+        <td width=150>
+            <center> <span><b>ICinW</b></span></center>
+        </td>
+        <td width=150>
+            <center> <span><b>20 IC Datasets</b></span></center>
+        </td>
+        <td width=150>
+            <center> <span><b>Averaged n-shot scores</b></span></center>
+        </td>
+        <td width=150>
+            <center> <span><b>ImageNet21k+CC15M</b></span></center>
+        </td>
+        <!-- <td style="padding-left:8px"><b>Live QA-1</b>
+        </td> -->
+        <!-- <td style="padding-left:8px"><b>Live QA-1</b>
+        </td>
+        <td width=200>
+            Starts June 19, 12 PM PT!
+        </td>
+        <td width=200>
+            Starts June 19, 9 AM PT!
+        </td> -->
+    </tr>
+    <tr>
+        <td width=150>
+            <center> <span><b>ODinW</b></span></center>
+        </td>
+        <td width=150>
+            <center> <span><b>35 IC Datasets</b></span></center>
+        </td>
+        <td width=150>
+            <center> <span><b>Averaged n-shot scores</b></span></center>
+        </td>
+        <td width=150>
+            <center> <span><b>Objects365+CC15M</b></span></center>
+        </td>
+    </tr>
+    <!-- <tr>
+        <td width=150>
+        </td>
+        <td style="padding-left:8px"><b>Live QA-2</b>
+            <br>Individual live QA for challenge related talks and poster spotlight presenters.
+            <br>Hosted on Gatherly, joining link on the internal CVPR website
+          </td>
+          <td width=200>
+              Starts June 20, 12 AM PT!
+          </td> -->
+    </tr>
+</table>
+<!--  -->
+        <div class="row">
+            <h1 style="font-size:30px; color:grey; font-weight: 200">Dates</h1>
+            <div class="large-12 columns" style="text-align:left;">
+                <div class="large-12 columns" style="text-align:left;">
+                    <p style="font-size:15px; font-weight: 200; border-style: solid;
+                                  border-width: 1px; text-align:justify; padding:5px; width:65%">
+                        <code>
+                                <span style="width:40%; margin:5px; display:inline-block;">July 25, 2022</span>
+                                <span style="display:inline-block; margin-left:10px;">Competition starts, testing phase begins</span><br>
+
+                                <span style="width:40%; margin:5px; display:inline-block;">
+                                    September 30, 2022
+                                </span>
+                                <span style="display:inline-block; margin-left:10px;">Competition ends (challenge paper submission)</span><br>
+
+                                <span style="width:40%; margin:5px; display:inline-block;">TBD</span>
+                                <span style="display:inline-block; margin-left:10px;">Workshop paper submission deadline</span><br>
+
+                                <span style="width:40%; margin:5px; display:inline-block;">TBD</span>
+                                <span style="display:inline-block; margin-left:10px;">Workshop paper acceptance decision to authors</span><br>
+
+                            </code></p>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <h1 style="font-size:30px; color:grey; font-weight: 200">Invited Speakers (TBD)</h1>
+            <!-- <div class="team" id="people">
+                <div class="row">
+                    <div class="large-1 columns" style="padding-left:0px">
+                        <p></p>
+                    </div>
+                    <div class="large-2 columns">
+                        <a target="_blank" href="https://staff.fnwi.uva.nl/r.fernandezrovira/"><img src="./static/invited/speakers_2021/raquel.png" class="home_team_picture" style="width:150px; height:150px;">
+                            <br>
+                            <p style="font-weight: 200;">Raquel Fernández</a>
+                        <br>University of Amsterdam</p>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a target="_blank" href="https://sites.google.com/view/vittoferrari"><img src="./static/invited/speakers_2021/vittorio.png" class="home_team_picture" style="width:150px; height:150px;">
+                            <br>
+                            <p style="font-weight: 200;">Vittorio Ferrari</a>
+                        <br>Google</p>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a target="_blank" href="https://hhexiy.github.io/"><img src="./static/invited/speakers_2021/hehe.jpg" class="home_team_picture" style="width:150px; height:150px;">
+                            <br>
+                            <p style="font-weight: 200;">He He</a>
+                        <br>New York University</p>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a target="_blank" href="https://www.linkedin.com/in/anirudhkoul/"><img src="./static/invited/speakers_2021/anirudh.jpeg" class="home_team_picture" style="width:150px; height:150px;">
+                            <br>
+                            <p style="font-weight: 200;">Anirudh Koul</a>
+                        <br>Pinterest</p>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a target="_blank" href="https://www.cs.princeton.edu/~olgarus/"><img src="./static/invited/speakers_2021/olga.jpeg" class="home_team_picture" style="width:150px; height:150px;">
+                            <br>
+                            <p style="font-weight: 200;">Olga Russakovsky</a>
+                        <br>Princeton University</p>
+                    </div>
+
+                    <div class="large-1 columns"><p></p></div>
+                </div>
+
+                <div class="row">
+
+                    <div class="large-1 columns" style="padding-left:0px">
+                        <p></p>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a target="_blank" href="http://www.aidanematzadeh.me/"><img src="./static/invited/speakers_2021/aida.jpg" class="home_team_picture" style="width:150px; height:150px;">
+                            <br>
+                            <p style="font-weight: 200;">Aida Nematzadeh</a>
+                        <br>DeepMind</p>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a target="_blank" href="https://web.eecs.umich.edu/~justincj/"><img src="./static/invited/speakers_2021/justin.jpg" class="home_team_picture" style="width:150px; height:150px;">
+                            <br>
+                            <p style="font-weight: 200;">Justin Johnson</a>
+                        <br>University of Michigan</p>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a target="_blank" href="https://www.damienteney.info/"><img src="./static/invited/speakers_2021/damien.png" class="home_team_picture" style="width:150px; height:150px;">
+                            <br>
+                            <p style="font-weight: 200;">Damien Teney</a>
+                        <br>Idiap Research Institute</p>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a target="_blank" href="https://www.cs.unc.edu/~mbansal/"><img src="./static/invited/speakers_2021/mohit.png" class="home_team_picture" style="width:150px; height:150px;">
+                            <br>
+                            <p style="font-weight: 200;">Mohit Bansal</a>
+                        <br>UNC Chapel Hill</p>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a target="_blank" href="https://www.cs.cmu.edu/~katef/"><img src="./static/invited/speakers_2021/katerina.png" class="home_team_picture" style="width:150px; height:150px;">
+                            <br>
+                            <p style="font-weight: 200;">
+                                Katerina Fragkiadaki</a>
+                        <br>Carnegie Mellon University</p>
+                    </div>
+                    <div class="large-1 columns">
+                        <p></p>
+                    </div>
+                </div>
+                <hr>
+            </div> -->
+        </div>
+
+        <div class="row" id="program">
+            <h1 style="font-size:30px; color:grey; font-weight: 200">Program (TBD)</h1>
+            <!-- <br>
+            <br>
+            <br>
+
+            <h2 style="font-size:25px; color:red; font-weight: 200"><b>Live</b></h2>
+            <div id="content">
+                <div class="schedule">
+                    <table width="100%">
+                        <tr id="panel-1">
+                            <td width=150>
+                                <center>June 19, 2021 <br> 9 AM - 10 AM PT</center>
+                            </td>
+                            <td width=500>
+                                <center>
+                                    <img src="./static/invited/speakers_2021/vittorio.png">
+                                    <img src="./static/invited/speakers_2021/damien.png">
+                                    <img src="./static/invited/speakers_2021/raquel.png">
+                                    <br>
+                                    <img src="./static/invited/speakers_2021/aida.jpg">
+                                    <img src="./static/invited/speakers_2021/olga.jpeg">
+                            </td>
+                            <td style="padding-left:8px">
+                                <b>Panel-1: Future Directions</b>
+                                <br>
+                                Vittorio Ferrari, Damien Teney, Raquel Fernández, <br> Aida Nematzadeh, Olga Russakovsky
+                                <br>
+                                <br>
+                                Hosted on Zoom, joining link on the internal CVPR website: <a target="_blank" href="https://www.eventscribe.net/2021/2021CVPR/agenda.asp?startdate=6/19/2021&enddate=6/19/2021&BCFO=M&pfp=Workshops&mode=&tn=&cpftwo=&custwo=&pta=/">Link</a>
+                                <br><br>
+                                <span style="color: grey">(Panel ended) 
+                                <br><br>
+                                Recording available now: <a target="_blank" href="https://youtu.be/L-86t1AW3z4">[Video]</a>
+                                <br>
+                                <br>
+                                
+                                <br>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr id="live-qa-1">
+                            <td width=150>
+                                <center>June 19, 2021 <br>12 PM - 1 PM PT</center>
+                            </td>
+                            <td width=240>
+                                <center>
+                                    <img src="./static/invited/poster.png" style="width: 80px; height: 80px; border-radius: 0%;">
+                                    <img src="./static/invited/poster.png" style="width: 80px; height: 80px; border-radius: 0%;">
+                                    <img src="./static/invited/poster.png" style="width: 80px; height: 80px; border-radius: 0%;">
+                                    <br>
+                                    <img src="./static/invited/poster.png" style="width: 80px; height: 80px; border-radius: 0%;">
+                                    <img src="./static/invited/poster.png" style="width: 80px; height: 80px; border-radius: 0%;">
+                                </center>
+                            </td>
+                            <td style="padding-left:8px"><b>Live QA-1</b>
+                                <br>
+                                Individual live QA for challenge related talks and poster spotlight presenters.
+                                <br>
+                                <br>
+                                Hosted on Gatherly, joining link on the internal CVPR website: <a target="_blank" href="https://www.eventscribe.net/2021/2021CVPR/agenda.asp?startdate=6/19/2021&enddate=6/19/2021&BCFO=M&pfp=Workshops&mode=&tn=&cpftwo=&custwo=&pta=/">Link</a>
+                            </td>
+                        </tr>
+                        <tr id="panel-2">
+                            <td width=150>
+                                <center>June 19, 2021 <br>3 PM - 4 PM PT</center>
+                            </td>
+                            <td width=500>
+                                <center>
+                                    <img src="./static/invited/speakers_2021/justin.jpg">
+                                    <img src="./static/invited/speakers_2021/hehe.jpg">
+                                    <img src="./static/invited/speakers_2021/mohit.png">
+                                    <br>
+                                    <img src="./static/invited/speakers_2021/katerina.png">
+                                    <img src="./static/invited/speakers_2021/anirudh.jpeg">
+                            </td>
+                            <td style="padding-left:8px">
+                                <b>Panel-2: Future Directions</b>
+                                <br>
+                                Justin Johnson, He He, Mohit Bansal,<br> Katerina Fragkiadaki, Anirudh Koul
+                                <br>
+                                <br>
+                                Hosted on Zoom, joining link on the internal CVPR website: <a target="_blank" href="https://www.eventscribe.net/2021/2021CVPR/agenda.asp?startdate=6/19/2021&enddate=6/19/2021&BCFO=M&pfp=Workshops&mode=&tn=&cpftwo=&custwo=&pta=/">Link</a>
+                                <br><br>
+                                <span style="color: grey">(Panel ended) 
+                                <br><br>
+                                Recording available now: <a target="_blank" href="https://youtu.be/GobqvKXCVtc">[Video]</a>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr id="live-qa-2">
+                            <td width=150>
+                                <center>June 20, 2021 <br>12 AM - 1 AM PT</center>
+                            </td>
+                            <td width=240>
+                                <center>
+                                    <img src="./static/invited/poster.png" style="width: 80px; height: 80px; border-radius: 0%;">
+                                    <img src="./static/invited/poster.png" style="width: 80px; height: 80px; border-radius: 0%;">
+                                    <img src="./static/invited/poster.png" style="width: 80px; height: 80px; border-radius: 0%;">
+                                    <br>
+                                    <img src="./static/invited/poster.png" style="width: 80px; height: 80px; border-radius: 0%;">
+                                    <img src="./static/invited/poster.png" style="width: 80px; height: 80px; border-radius: 0%;">
+                                </center>
+                            </td>
+                            <td style="padding-left:8px"><b>Live QA-2</b>
+                                <br>
+                                Individual live QA for challenge related talks and poster spotlight presenters.
+                                <br>
+                                <br>
+                                Hosted on Gatherly, joining link on the internal CVPR website: <a target="_blank" href="https://www.eventscribe.net/2021/2021CVPR/agenda.asp?startdate=6/19/2021&enddate=6/19/2021&BCFO=M&pfp=Workshops&mode=&tn=&cpftwo=&custwo=&pta=/">Link</a>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div> -->
+            </div>
+
+            <!-- <br>
+            <br>
+            <br>
+
+            <h2 style="font-size:25px; color:red; font-weight: 200"><b>Prerecorded</b></h2>
+            <div id="content-2">
+                <div class="schedule">
+                    <table width="100%">
+                        <tr>
+                            <td width=150>
+                                <center> </center>
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/img/aishwarya.jpg"></center>
+                            </td>
+                            <td style="padding-left:8px"><b>Welcome</b>
+                              <br>Aishwarya Agrawal (University of Montreal / Mila / Deepmind)
+                              <br><a target="_blank" href="https://youtu.be/boO0dc1zmQY">[Video]</a>
+                              <a target="_blank" href="https://drive.google.com/file/d/11mPWEu8fwWMdPeBME3OarcQe2f2TjIxK/view?usp=sharing">[Slides]</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#panel-1">Panel-1</a></center>
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/invited/speakers_2021/raquel.png"></center>
+                            </td>
+                            <td style="padding-left:8px">
+                                <b>Invited Talk</b>
+                                <br>
+                                <b>Title: Visual & Conversational Saliency</b>
+                                <br>Raquel Fernández (University of Amsterdam)
+                                <br>
+                                <a target="_blank" href="https://youtu.be/SNwSukCtPM0">[Video]</a>
+                                <a target="_blank" href="https://drive.google.com/file/d/14Vg_zny0Qz2oQjk58WwN6QLBD5sybYd2/view?usp=sharing">[Slides]</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#panel-1">Panel-1</a> </center>
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/invited/speakers_2021/vittorio.png"></center>
+                            </td>
+                            <td style="padding-left:8px">
+                                <b>Invited Talk</b>
+                                <br>
+                                <b>Title: Connecting Vision and Language with Localized Narratives and Open Images</b>
+                                <br>Vittorio Ferrari (Google)
+                                <br>
+                                <a target="_blank" href="https://youtu.be/-iF4gkcdBx0">[Video]</a>
+                                <a target="_blank" href="https://drive.google.com/file/d/1SXK223NUXGz-Ayp2mzcBY9mS4W1-snLT/view?usp=sharing">[Slides]</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#panel-2">Panel-2</a></center>
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/invited/speakers_2021/hehe.jpg"></center>
+                            </td>
+                            <td style="padding-left:8px">
+                                <b>Invited Talk</b>
+                                <br>
+                                <b>Title: Towards Overcoming the Language Prior in VQA</b>
+                                <br>He He (New York University)
+                                <br>
+                                <a target="_blank" href="https://youtu.be/C3CAW8fW8A4">[Video]</a>
+                                <a target="_blank" href="https://drive.google.com/file/d/1TxqePHlM8Ofa_7aY16QtXQ84jomIkynK/view?usp=sharing">[Slides]</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#panel-2">Panel-2</a></center>
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/invited/speakers_2021/anirudh.jpeg"></center>
+                            </td>
+                            <td style="padding-left:8px">
+                                <b>Invited Talk</b>
+                                <br>
+                                <b>Title: How AI Can Empower The Blind Community</b>
+                                <br>Anirudh Koul (Pinterest)
+                                <br>
+                                <a target="_blank" href="https://youtu.be/zCmzV2QXwMY">[Video]</a>
+                                <a target="_blank" href="https://drive.google.com/file/d/1VyOlRsGJNYSNfBnDJE8LSnFyuJNWmyfV/view?usp=sharing">[Slides]</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#panel-1">Panel-1</a> </center>
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/invited/speakers_2021/olga.jpeg"></center>
+                            </td>
+                            <td style="padding-left:8px">
+                                <b>Invited Talk</b>
+                                <br>
+                                <b>Title: Models, metrics, tasks and fairness in vision and language</b>
+                                <br>Olga Russakovsky (Princeton University)
+                                <br>
+                                <a target="_blank" href="https://youtu.be/dyHlSU7HSN8">[Video]</a>
+                                <a target="_blank" href="https://drive.google.com/file/d/1QhRQVkqIuGgvtfP61MssHZsM5xXYXs2P/view?usp=sharing">[Slides]</a>
+                            </td>
+                        </tr>
+                        
+                        
+
+                        <tr id="vqa-challenge-2021-results">
+                            <td width=150>
+                                <center>To ask questions, join <a href="#live-qa-1">Live QA-1</a> or <a href="#live-qa-2">Live QA-2</a></center>
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/img/ayush.jpg"></center>
+                            </td>
+                            <td style="padding-left:8px"><b>VQA Challenge Talk (Overview, Analysis and Winner Announcement)</b>
+                                <br>Ayush Shrivastava (Georgia Tech)
+                                <br>
+                                <a target="_blank" href="https://youtu.be/8RRyaKOlRWs">[Video]</a>
+                                <a target="_blank" href="https://drive.google.com/file/d/1ZcA5Bssv4eJPjl32xy17atjnznsbKQjX/view?usp=sharing">[Slides]</a>
+                                <br><br>
+                                Poster ID: 12
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#live-qa-1">Live QA-1</a> or <a href="#live-qa-2">Live QA-2</a></center>
+                            </td>
+                            <td width=500>
+                                <center>
+                                    <img src="./static/invited/challenge_2021_winners/MingYan.png">
+                                    <img src="./static/invited/challenge_2021_winners/HaiyangXu.png">
+                                    <img src="./static/invited/challenge_2021_winners/ChenliangLi.png">
+                                    <img src="./static/invited/challenge_2021_winners/JunfengTian.png">
+                                    <br>
+                                    <img src="./static/invited/challenge_2021_winners/WeiWang.png">
+                                    <img src="./static/invited/challenge_2021_winners/BinBi.png">
+                                    <img src="./static/invited/challenge_2021_winners/ZhengCao.png">
+                                    <img src="./static/invited/challenge_2021_winners/JiZhang.png">
+                                    <br>
+                                    <img src="./static/invited/challenge_2021_winners/SongfangHuang.png">
+                                    <img src="./static/invited/challenge_2021_winners/FeiHuang.png">
+                                    <img src="./static/invited/challenge_2021_winners/LuoSi.png">
+                                    <br>
+                                    <img src="./static/invited/challenge_2021_winners/damo.png" style="border-radius: 0%;">
+                                </center>
+                            </td>
+                            <td style="padding-left:8px"><b>VQA Challenge Winner Talk</b>
+                                <br>Team: AliceMind
+                                <br>Members:  Ming Yan, Haiyang Xu, Chenliang Li , Junfeng Tian, Wei Wang, Bin Bi, Zheng Cao, Ji Zhang, Songfang Huang, Fei Huang, Luo Si
+                                <br>Affiliation: Alibaba Group
+                                <br>
+                                <a target="_blank" href="https://youtu.be/iRG29Cq4CDE">[Video]</a>
+                                <a target="_blank" href="https://drive.google.com/file/d/1KjVjz9cG0KFbEzQwckyDXwrh_63-dbBn/view?usp=sharing">[Slides]</a>
+                                <br><br>
+                                Poster ID: 13
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#live-qa-1">Live QA-1</a> or <a href="#live-qa-2">Live QA-2</a></center>
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/img/yashkant.jpg"></center>
+                            </td>
+                            <td style="padding-left:8px"><b>TextVQA Challenge Talk (Overview, Analysis and Winner Announcement)</b>
+                                <br>Yash Kant (Georgia Tech)
+                                <br>
+                                <a target="_blank" href="https://youtu.be/0vdMWMStxOA">[Video]</a>
+                                <a target="_blank" href="https://drive.google.com/file/d/1CGksfKjJnbsnDV6UnGYaT4_4k1PF-UgK/view?usp=sharing">[Slides]</a>
+                                <br><br>
+                                Poster ID: 14
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#live-qa-1">Live QA-1</a> or <a href="#live-qa-2">Live QA-2</a></center>
+                            </td>
+                            <td width=500>
+
+                            </td>
+                        <td style="padding-left:8px"><b>TextVQA Challenge Winner</b>
+                            <br>Members: Yixuan Qiao, Hao Chen, Jun Wang, Xianbin Ye, Ziliang Li, Peng Gao, Guotong Xie
+                            <br>
+                            <a target="_blank" href="https://drive.google.com/file/d/1TWGJg7q7DJO_wb8dw2KS__pm4lhh7UHn/view">[Paper]</a>
+                            <br><br>
+                            Poster ID: 15
+                        </td>
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#live-qa-1">Live QA-1</a> or <a href="#live-qa-2">Live QA-2</a></center>
+                            </td>
+                            <td width=500>
+                                <center>
+                                    <img src="./static/invited/poster.png" style="width: 80px; height: 80px; border-radius: 0%;">
+                                    <img src="./static/invited/poster.png" style="width: 80px; height: 80px; border-radius: 0%;">
+                                    <img src="./static/invited/poster.png" style="width: 80px; height: 80px; border-radius: 0%;">
+                                </center>
+                            </td>
+                            <td style="padding-left:8px"><b>Poster Spotlights</b>
+                                <br>
+                                To watch the poster spotlights, visit: <a href="posters_2021.html">https://visualqa.org/posters_2021</a>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#live-qa-1">Live QA-1</a> or <a href="#live-qa-2">Live QA-2</a></center>
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/invited/speakers_2020/aman.jpg"></center>
+                            </td>
+                            <td style="padding-left:8px"><b>TextCaps Challenge Talk (Overview, Analysis and Winner Announcement)</b>
+                                <br>Amanpreet Singh (Facebook AI Research)
+                                <br>
+                                <a target="_blank" href="https://youtu.be/oaPgdb7h4-0">[Video]</a>
+                                <a target="_blank" href="https://drive.google.com/file/d/1-llSbeHg3H03e6eHXcRq9urm7nAIDMUG/view?usp=sharing">[Slides]</a>
+                                <br><br>
+                                Poster ID: 16
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#live-qa-1">Live QA-1</a> or <a href="#live-qa-2">Live QA-2</a></center>
+                            </td>
+                            <td width=500>
+                                <center>
+                                    <img src="./static/invited/challenge_2021_winners/Picture1.png">
+                                    <img src="./static/invited/challenge_2021_winners/Picture2.png">
+                                    <img src="./static/invited/challenge_2021_winners/Picture3.png">
+                                    <img src="./static/invited/challenge_2021_winners/Picture4.png">
+                                    <br>
+                                    <img src="./static/invited/challenge_2021_winners/Picture5.png">
+                                    <img src="./static/invited/challenge_2021_winners/Picture6.png">
+                                    <img src="./static/invited/challenge_2021_winners/Picture7.png">
+                                    <img src="./static/invited/challenge_2021_winners/Picture8.png">
+                                    <br>
+                                    <img src="./static/invited/challenge_2021_winners/Picture9.png">
+                                    <img src="./static/invited/challenge_2021_winners/Picture10.png">
+                                    <br>
+                                    <img src="./static/invited/challenge_2021_winners/Picture11.png" style="border-radius: 0%;">
+                                    <img src="./static/invited/challenge_2021_winners/Picture12.png" style="border-radius: 0%;">
+                                </center>
+                            </td>
+                            <td style="padding-left:8px"><b>TextCaps Challenge Winner Talk</b>
+                                <br>Members: Zhengyuan Yang, Jianfeng Wang, Xiaowei Hu, Zhe Gan, Lijuan Wang, Yijuan Lu, Dinei Florencio, Cha Zhang, Jiebo Luo, Zicheng Liu
+                                <br>Affiliations: Microsoft, University of Rochester
+                                <br>
+                                <a target="_blank" href="https://youtu.be/IzqS3TUyPh4">[Video]</a>
+                                <a target="_blank" href="https://drive.google.com/file/d/1lqIkw0QpNjbQkT_AikcnLZPUSMGLEpsZ/view?usp=sharing">[Slides]</a>
+                                <br><br>
+                                Poster ID: 17
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#panel-1">Panel-1</a></center>
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/invited/speakers_2021/aida.jpg"></center>
+                            </td>
+                            <td style="padding-left:8px">
+                                <b>Invited Talk</b>
+                                <br>
+                                <b>Title: Towards Better Multimodal Pretraining</b>
+                                <br>Aida Nematzadeh (DeepMind)
+                                <br>
+                                <a target="_blank" href="https://youtu.be/06fSUQw_RCQ">[Video]</a>
+                                <a target="_blank" href="https://drive.google.com/file/d/1gG8k_DFtunpDPY4YF0aCCFs3DM5ktc4M/view?usp=sharing">[Slides]</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#panel-2">Panel-2</a></center>
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/invited/speakers_2021/justin.jpg"></center>
+                            </td>
+                            <td style="padding-left:8px">
+                                <b>Invited Talk</b>
+                                <br>
+                                <b>Title: Learning Visual Representations from Language</b>
+                                <br>Justin Johnson (University of Michigan)
+                                <br>
+                                <a target="_blank" href="https://youtu.be/swg0wCRBUJE">[Video]</a>
+                                <a target="_blank" href="https://drive.google.com/file/d/1IsR1CH2iK152L9fCvkXAX6a7icKtBXcN/view?usp=sharing">[Slides]</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#panel-1">Panel-1</a> </center>
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/invited/speakers_2021/damien.png"></center>
+                            </td>
+                            <td style="padding-left:8px">
+                                <b>Invited Talk</b>
+                                <br>
+                                <b>Title: Visual question answering and the limits of statistical learning. Are we building a ladder to the moon?</b>
+                                <br>Damien Teney (Idiap Research Institute)
+                                <br>
+                                <a target="_blank" href="https://youtu.be/ggWmvWsE1l0">[Video]</a>
+                                <a target="_blank" href="https://drive.google.com/file/d/1qEuN8nFSYdaorG-tujonMqpjQCG59Oro/view?usp=sharing">[Slides]</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#panel-2">Panel-2</a></center>
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/invited/speakers_2021/mohit.png"></center>
+                            </td>
+                            <td style="padding-left:8px">
+                                <b>Invited Talk</b>
+                                <br>
+                                <b>Title: Knowledgeable & Spatial-Temporal Vision+Language</b>
+                                <br>Mohit Bansal (UNC Chapel Hill)
+                                <br>
+                                <a target="_blank" href="https://youtu.be/ckWMwRCNsB4">[Video]</a>
+                                <a target="_blank" href="https://drive.google.com/file/d/1JX6NF05DbALR35Ovl2bcc9D-RKglVLKo/view?usp=sharing">[Slides]</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=150>
+                                <center>To ask questions, join <a href="#panel-2">Panel-2</a></center>
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/invited/speakers_2021/katerina.png"></center>
+                            </td>
+                            <td style="padding-left:8px">
+                                <b>Invited Talk</b>
+                                <br>
+                                <b>Title: Augment Machine Intelligence with Multimodal Information</b>
+                                <br>Katerina Fragkiadaki (Carnegie Mellon University)
+                                <br>
+                                <a target="_blank" href="https://youtu.be/uZgU7aOl6ks">[Video]</a>
+                                <a target="_blank" href="https://drive.google.com/file/d/1KuqUU_-Y43TZXfBs318MuMqRjMV_Coap/view?usp=sharing">[Slides]</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=150>
+                                <center> </center>
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/img/aishwarya.jpg"></center>
+                            </td>
+                            <td style="padding-left:8px"><b>Closing Remarks</b>
+                              <br>Aishwarya Agrawal (University of Montreal / Mila / Deepmind)
+                              <br>
+                              <a target="_blank" href="https://youtu.be/wjCjG_kkIU4">[Video]</a>
+                              <a target="_blank" href="https://drive.google.com/file/d/1sLZyDsEuFa23D8Z-qCq7JLG_USMMR2es/view?usp=sharing">[Slides]</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <hr>
+            </div>
+        </div> -->
+
+        <!-- <div class="row" id="sub">
+            <h1 style="font-size:30px; color:grey; font-weight: 200">Submission Instructions</h1>
+            <div class="large-12 columns" style="text-align:left;">
+                <p style="font-size:15px; font-weight: 400; text-align:left">We invite submissions of extended abstracts of at most 2 pages (excluding references) describing work in areas such as: Visual Question Answering, Visual Dialog, (Textual) Question Answering, (Textual) Dialog Systems, Commonsense knowledge, Video Question Answering, Video Dialog, Vision + Language, and Vision + Language + Action (Embodied Agents). Accepted submissions will be presented as posters at the workshop. The extended abstract should follow the CVPR formatting guidelines and be emailed as a single PDF to the <a href="#submit">email id</a> mentioned below.
+                </p>
+                <br>
+
+                <ul style="font-size:15px;">
+                    <span style="font-size:20px;">Dual Submissions</span><br>
+                    We encourage submissions of relevant work that has been previously published, or is to be presented at the main conference. The accepted abstracts will not appear in the official IEEE proceedings.
+                    <br><br>
+
+                    <span style="font-size:20px;" id="submit">Where to Submit?</span><br>
+                    Please send your abstracts to <a href="mailto:visualqa.workshop@gmail.com">visualqa.workshop@gmail.com</a>
+                    <br><br>
+            </div>
+            <hr>
+        </div> -->
+<!--  -->
+        <hr>
+        <div class="row">
+            <h1 style="font-size:30px; color:grey; font-weight: 200">Advisory Committee</h1>
+            <div class="team" id="people">
+                <div class="row">
+                    <div class="large-1 columns">
+                        <p></p>
+                    </div>
+                    <div class="large-1 columns">
+                        <p></p>
+                    </div>
+                    <div class="large-2 columns">
+                        <a href="https://people.eecs.berkeley.edu/~trevor/"><img src="https://www2.eecs.berkeley.edu/Faculty/Photos/Fullsize/darrell.jpg" target="_blank" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Trevor Darrell
+                            <br>UC Berkley</p>
+                    </div>
+                    <div class="large-2 columns">
+                        <a href="https://www.leizhang.org/"><img src="./static/eccv2022/img/leizhang-circle.jpg" target="_blank" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Lei Zhang
+                            <br>International Digital Economy Academy (IDEA)</p>
+                    </div>
+                    <div class="large-2 columns">
+                        <a href="https://people.ece.uw.edu/hwang/"><img src="./static/eccv2022/img/hwang-circle.jpg" target="_blank" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Jenq-Neng Hwang
+                            <br>University of Washington</p>
+                    </div>
+                    
+                    
+                    <div class="large-2 columns">
+                        <a href="https://pages.cs.wisc.edu/~yongjaelee/"><img src="./static/eccv2022/img/lee-circle.jpg"" target="_blank" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Yong Jae Lee
+                            <br>University of Wisconsin</p>
+                    </div>
+     
+                    <!-- <div class="large-2 columns">
+                        <a target="_blank" href="https://yashkant.github.io/"><img src="./static/img/yashkant.jpg" class="home_team_picture" style="width: 125px; height:125px;">
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Yash Kant
+                            <br>Georgia Tech</p>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a target="_blank" href="https://sgondala.github.io/"><img src="./static/img/sashank.png" class="home_team_picture" style="width: 125px; height:125px;">
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Sashank Gondala
+                            <br>Georgia Tech</p>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a target="_blank" href="https://satwikkottur.github.io/"><img src="./static/img/satwik.jpg" class="home_team_picture" style="width: 125px; height:125px;">
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Satwik Kottur
+                            <br>Facebook AI</p>
+                    </div> -->
+
+                    <div class="large-1 columns">
+                        <p></p>
+                    </div>
+                    <div class="large-1 columns">
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="row" style="padding-left: 1em; padding-right: 1em;">
+                    <div class="large-1 columns" style="padding-left:75px">
+                      <p></p>
+                    </div>
+                    <div class="large-1 columns">
+                        <p></p>
+                    </div>
+                    <div class="large-1 columns">
+                        <p></p>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a href="http://people.csail.mit.edu/celiu/"><img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=j7MW4iYAAAAJ&citpid=8" target="_blank" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Ce Liu
+                            <br>Microsoft</p>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a href="https://www.microsoft.com/en-us/research/people/xdh/"><img src="./static/eccv2022/img/xuedong-circle.jpg" target="_blank" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Xuedong Huang
+                            <br>Microsoft</p>
+                    </div>
+
+                    <!-- <div class="large-2 columns">
+                        <a target="_blank" href="https://www.cc.gatech.edu/~dbatra/"><img src="./static/img/dhruv.jpg" class="home_team_picture" style="width: 125px; height:125px;">
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Dhruv Batra
+                            <br>Georgia Tech / Facebook AI Research</p>
+                    </div>
+                    <div class="large-2 columns">
+                        <a target="_blank" href="https://www.cc.gatech.edu/~parikh/"><img src="./static/img/devi.jpg" class="home_team_picture" style="width: 125px; height:125px;">
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Devi Parikh
+                            <br>Georgia Tech / Facebook AI Research</p>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a target="_blank" href="https://www.cc.gatech.edu/~aagrawal307/"><img src="./static/img/aishwarya.jpg" class="home_team_picture" style="width: 125px; height:125px;">
+                            <br>
+                        </a>
+                        <p style="font-weight: 200; margin-left:-20px;">Aishwarya Agrawal
+                            <br>University of Montreal / Mila / Deepmind</p>
+                    </div> -->
+                    <hr>
+                </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="large-5 columns" style="padding-left: 1em;">
+            <h1 style="font-size:30px; color:grey; font-weight: 200">Workshop Organizers</h1>
+            <div class="team" id="people">
                 <div class="row">
-                    <h1 style="font-size:20px; color:grey; font-weight: 200;" align=left>Overview</h1>
-                </div>
-                <div class="row">
-                    <div class="large-11 columns" style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
-                        <p style="font-size:15px; font-weight: 200;" align=justify>State-of-the-art CV systems are trained to predict a fixed set of predetermined object categories. This restricted form of supervision limits their generality and usability since additional labeled data is needed to specify any other visual concept.</p> 
-                            
-                        <p style="font-size:15px; font-weight: 200;" align=justify>Recent works, such as <a href="https://openai.com/blog/clip/"> CLIP </a>, <a href="https://ai.googleblog.com/2021/05/align-scaling-up-visual-and-vision.html"> ALIGN </a> and <a href="https://arxiv.org/abs/2111.11432"> Florence </a>  for image classification, and <a href="https://arxiv.org/abs/2104.13921"> ViLD </a>, <a href="https://arxiv.org/abs/2112.09106"> RegionCLIP </a> and <a href="https://arxiv.org/abs/2112.03857"> GLIP </a> for object detection, show that learning from large-scale image-text data is a promising approach to achieve open-vocabulary CV models. These vision models with language interface also show superior zero-shot and few-shot adaption performance on various real-world tasks.</p>
-                                
-                        <p style="font-size:15px; font-weight: 200;" align=justify>We propose this "Computer Vision in the Wild" workshop, aiming to gather academic and industry communities to work on CV problems in real-world scenarios, focusing on the challenge of open vocabulary vision tasks and efficient domain adaption.</p>
-                                    
-                        <p style="font-size:15px; font-weight: 200;" align=justify>Since there is no established benchmarks to measure the progress of "CV in the wild", we develop two new benchmarks for: 1) classification and 2) detection, to measure the adaption efficiency of various models/methods over diverse real-world datasets. This workshop will host two challenges, based on these two benchmarks, respectively</p>
-                        <!-- <div class="large-12 columns">
-                            <ul style="font-size:13px; font-weight: 200; display: inline;" align=justify>
-                                <li>265,016 images (COCO and abstract scenes)</li>
-                                <li>At least 3 questions (5.4 questions on average) per image
-                                </li>
-                                <li>10 ground truth answers per question</li>
-                                <li>3 plausible (but likely incorrect) answers per question</li>
-                                <li>Automatic evaluation metric</li>
-                            </ul>
-                        </div> -->
+                    <div class="large-1 columns">
+                        <p></p>
                     </div>
-                    <!-- <div class="large-12 columns">
-                        <p style="font-size:15px; font-weight: 200;" align=justify>
-                            <br><a href="https://groups.google.com/a/vt.edu/forum/#!forum/vqa-cvmlp-g/join">Subscribe</a> to our group for updates!</p>
-                    </div> -->
-                </div>
-            </div>
-            <div class="large-7 columns">
-                <div class="row">
-                    <h1 style="font-size:20px; color:grey; font-weight: 200;" align=left>CV in the Wild Challenges</h1>
-                </div>
-                <div class="large-10 columns" style="margin-left:-10px">
-                    <p style="font-size:15px; font-weight: 200;">There are two challenges associated to this workshop: "Image Classification in the Wild" (ICinW) and "Object Detection in the Wild" (ODinW). We summarize their evaluation datasets and metrics in the table below. 
-                    </p>
-                    <p style="font-size:15px; font-weight: 200;">To prevent a race purely in pre-training data and model size, we will have two tracks in both challenges. 
-                    </p>
-                    <p style="font-size:15px; font-weight: 200;">For the academic track, pre-training data is limited to ImageNet21k, Objects365, CC15M, and YFCC15M. 
-                    </p>
-                    <p style="font-size:15px; font-weight: 200;">For the industry track, there is no limitation on pre-training data and model size. Teams are required to disclose meta info of model and data if extra data is used.
-                    </p>
-                    <p style="font-size:15px; font-weight: 200;">More information about the challenges are released: 
-                  <a href="https://computer-vision-in-the-wild.github.io/ELEVATER/"> [Benchmark] </a>
-                   <a href="https://arxiv.org/abs/2204.08790"> [Document] </a>.
-                        Our evaluation server will be online at early July, 2022.
-                      </p>
-                </div>
-                <div class="large-12 columns" style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
-                    <ul class="unilist">
-                        <li>
-                            <p style="font-size:15px; font-weight: 600; display: inline;" align=justify>Important Dates</p>
-                        </li>
-                    </ul>
-                    <div class="large-5 columns">
-                        <!-- <div class="row" style="font-size:14px; font-weight:400; margin-top: -20px; padding-right: 1em;" align=justify>Balanced Real Images
-                            <br> </div> -->
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <ul style="font-size:15px; font-weight:200;">
-                                    <li>July 25th: Competition starts, testing phase begins</li>
-                                    <li>Sep 30th: Competition ends (challenge paper submission - optional)</li>
-                                      <li>TBD: Workshop paper submission deadline</li>
-                                      <li>TBD: Workshop paper acceptance decision to authors</li>
-                                </ul>
-                            </div>
+                    <div class="large-1 columns">
+                        <p></p>
+                    </div>
+                    <div class="large-2 columns">
+                        <a href="https://pzzhang.github.io/pzzhang/"><img src="./static/eccv2022/img/pengchuan-circle.jpg" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Pengchuan Zhang
+                            <br>Meta AI</p>
+                    </div>
+                    <div class="large-2 columns">
+                        <a href="https://chunyuan.li/"><img src="https://vlp-tutorial.github.io/2022/img/organizer/chunyuan.jpg" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Chunyuan Li
+                            <br>Microsoft</p>
+                    </div>
+                    <div class="large-2 columns">
+                        <a href="http://jyotianeja.com/""><img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=FYB92lkAAAAJ&citpid=1" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Jyoti Aneja
+                            <br>Microsoft</p>
+                    </div>
+                    <div class="large-2 columns">
+                        <a href="https://www.linkedin.com/in/pingjin1"><img src="./static/eccv2022/img/ping_jin.jpeg" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Ping Jin
+                            <br>Microsoft</p>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a href="https://jwyang.github.io"><img src="https://jwyang.github.io/images/profile.png" target="_blank" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Jianwei Yang
+                            <br>Microsoft</p>
                         </div>
+
+                    <!-- <div class="large-1 columns">
+                        <p></p>
                     </div>
-                    <div class="large-5 columns">
-                    </div>
-                    <div class="large-4 columns" style="left: 40px;">
-                    </div>
-                </div>
-            </div>
-                <!-- <div class="large-12 columns" style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
-                    <ul class="unilist">
-                        <li>
-                            <a href="javascript:void(0)" id="March"><span id="plus1" style="font-size:20px;" class="unibull">&#8853;</span></a>
-                            <p style="font-size:15px; font-weight: 600; display: inline;" align=justify>March 2017: Beta v1.9 release</p>
-                        </li>
-                    </ul>
-                    <div class="large-5 columns">
-                        <div class="row" style="font-size:14px; font-weight:400; display: none; margin-top: -20px; padding-right: 1em;" id="hiddenText11" align=justify>Balanced Real Images
-                            <br> </div>
-                        <div class="row">
-                            <div class="large-12 columns" style="display: none;" id="hiddenText12">
-                                <ul style="font-size:12px; font-weight:200;">
-                                    <li>123,287 COCO images
-                                        <br>(only train/val)
-                                        <li>658,111 questions</li>
-                                        <li>6,581,110 ground truth answers</li>
-                                        <li>1,974,333 plausible answers</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="large-5 columns">
-                        <div class="row" style="font-size:14px; font-weight:400; display: none; margin-top: -20px; " id="hiddenText13" align=justify>Balanced Binary Abstract Scenes </div>
-                        <div class="row">
-                            <div class="large-11 columns" style="display: none;" id="hiddenText14">
-                                <ul style="font-size:12px; font-weight:200;">
-                                    <li>31,325 abstract scenes
-                                        <br>(only train/val)
-                                        <li>33,383 questions</li>
-                                        <li>333,830 ground truth answers</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="large-4 columns" style="left: 40px;">
+                    <div class="large-1 columns">
+                        <p></p>
                     </div>
                 </div> -->
-                <!-- <div class="large-12 columns" style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
-                    <ul class="unilist">
-                        <li><a href="javascript:void(0)" id="October"><span id="plus2" style="font-size:20px;" class="unibull">&#8853;</span></a>
-                            <p style="font-size:15px; font-weight: 600; display: inline;" align=justify>October 2015: Full release (v1.0)</p>
-                        </li>
-                    </ul>
-                    <div class="large-5 columns">
-                        <div class="row" style="font-size:14px; font-weight:400; display: none; margin-top: -20px;" id="hiddenText21" align=justify>Real Images</div>
-                        <div class="row">
-                            <div class="large-11 columns" style="display: none;" id="hiddenText22">
-                                <ul style="font-size:12px; font-weight:200;">
-                                    <li>204,721 COCO images
-                                        <br>(all of current train/val/test)</li>
-                                    <li>614,163 questions</li>
-                                    <li>6,141,630 ground truth answers</li>
-                                    <li>1,842,489 plausible answers</li>
-                                </ul>
-                            </div>
-                        </div>
+
+                <div class="row">
+                    <div class="large-1 columns">
+                        <p></p>
                     </div>
-                    <div class="large-5 columns">
-                        <div class="row" style="font-size:14px; font-weight:400; display:none; margin-top: -20px;" id="hiddenText23" align=justify>Abstract Scenes</div>
-                        <div class="row">
-                            <div class="large-11 columns" style="display: none;" id="hiddenText24">
-                                <ul style="font-size:12px; font-weight:200;">
-                                    <li>50,000 abstract scenes</li>
-                                    <li>150,000 questions</li>
-                                    <li>1,500,000 ground truth answers</li>
-                                    <li>450,000 plausible answers</li>
-                                    <li>250,000 captions</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="large-1 columns">
+                        <p></p>
                     </div>
-                    <div class="large-4 columns"></div>
-                </div>
-                <div class="large-12 columns">
-                    <ul class="unilist">
-                        <li><a href="javascript:void(0)" id="July"><span id="plus3" style="font-size:20px;" class="unibull">&#8853;</span></a>
-                            <p style="font-size:15px; font-weight: 600; display: inline;" align=justify>July 2015: Beta v0.9 release</p>
-                        </li>
-                    </ul>
-                    <div class="large-12 columns" style="display: none; margin-top: -20px;" id="hiddenText3">
-                        <ul style="font-size:12px; font-weight: 200; display: inline;" align=justify>
-                            <li>123,287 COCO images (all of train/val)</li>
-                            <li>369,861 questions</li>
-                            <li>3,698,610 ground truth answers</li>
-                            <li>1,109,583 plausible answers</li>
-                        </ul>
-                        <br>
-                    </div>
-                </div>
-                <div class="large-12 columns">
-                    <ul class="unilist">
-                        <li><a href="javascript:void(0)" id="June"><span id="plus4" style="font-size:20px;" class="unibull">&#8853;</span></a>
-                            <p id="June" style="font-size:15px; font-weight: 600; display: inline;" align=justify>June 2015: Beta v0.1 release</p>
-                        </li>
-                    </ul>
-                    <div class="large-11 columns" style="display: none; margin-top: -20px;" id="hiddenText4">
-                        <ul style="font-size:12px; font-weight: 200; display: inline;" align=justify>
-                            <li>10,000 COCO images (from train)</li>
-                            <li>30,000 questions</li>
-                            <li>300,000 ground truth answers</li>
-                            <li>90,000 plausible answers</li>
-                        </ul>
-                        <br>
-                    </div>
-                </div> -->
-            <!-- </div> -->
-            <hr>
-            <div class="row">
-                <div class="large-12 columns">
-                    <h1 style="font-size:30px; color:grey; font-weight: 200;" align=left>Paper</h1>
-                    <p style="font-size:20px; font-weight: 200;" align=justify>Making the V in VQA Matter: Elevating the Role of Image Understanding in Visual Question Answering (CVPR 2017)</p>
-                    <br>
                     <div class="large-2 columns">
-                        <a href="https://arxiv.org/pdf/1612.00837.pdf" onClick="ga('send', 'event', { eventCategory: 'VQA2.0', eventAction: 'VQA2.0_Paper', eventLabel: 'VQA2.0_Paper'});"><img src="./static/img/paper_vqa2.jpg" height="400" width="200" style="border : 2px solid #b3b3b3; border-radius : 0px; display:block; margin:auto;" class="pull-right"></a>
-                        <br>
-                        <br>
-                        <p style="font-size:15px; font-weight: 200;" align=justify>Download the <a href="https://arxiv.org/pdf/1612.00837.pdf" onClick="ga('send', 'event', { eventCategory: 'VQA2.0', eventAction: 'VQA2.0_Paper', eventLabel: 'VQA2.0_Paper'});">paper</a></p>
-                        <p id="bibtex2" style="font-size:15px; font-weight: 200;" align=justify><a href="#" onclick="document.getElementById('bibtex21').style.display='block'; document.getElementById('bibtex2').style.display='none'; return false;">BibTeX</a></p>
-                        <div style="display: none;" id="bibtex21">
-                            <p style="font-size:12px; font-weight: 200; width:200%; text-align: left;">
-                                @InProceedings{balanced_vqa_v2,
-                                <br> author = {Yash Goyal and Tejas Khot and Douglas Summers{-}Stay and Dhruv Batra and Devi Parikh},
-                                <br> title = {Making the {V} in {VQA} Matter: Elevating the Role of Image Understanding in {V}isual {Q}uestion {A}nswering},
-                                <br> booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
-                                <br> year = {2017},
-                                <br> }
-                            </p>
-                        </div>
+                        <a href="https://xinw.ai/"><img src="https://xinw.ai/assets/images/photo.JPG" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Xin Wang
+                            <br>Microsoft</p>
                     </div>
-                    <div class="large-10 columns" style="left: -2em; top: -1em;">
-                        <img src="./static/img/vqa_examples.jpg" height="500" width="600" style="display:block; margin:auto;" frameBorder="0">
-                    </div>
-                    <!-- <hr> -->
-                </div>
-                <div class="large-12 columns">
-                    <h1 style="font-size:20px; color:grey; font-weight: 200;" align=left></h1>
-                    <p style="font-size:20px; font-weight: 200;" align=justify>Yin and Yang: Balancing and Answering Binary Visual Questions (CVPR 2016)</p>
-                    <br>
                     <div class="large-2 columns">
-                        <a href="https://arxiv.org/pdf/1511.05099.pdf"><img src="./static/img/paper_yinyang.png" style="border : 2px solid #b3b3b3; border-radius : 0px; height: 200px;"></a>
-                        <br>
-                        <br>
-                        <p style="font-size:15px; font-weight: 200;" align=justify>Download the <a href="https://arxiv.org/pdf/1511.05099.pdf">paper</a></p>
-                        <p id="bibtex1" style="font-size:15px; font-weight: 200;" align=justify><a href="#" onclick="document.getElementById('bibtex11').style.display='block'; document.getElementById('bibtex1').style.display='none'; return false;">BibTeX</a></p>
-                        <div style="display: none;" id="bibtex11">
-                            <p style="font-size:12px; font-weight: 200; width:150%;">
-                                @InProceedings{balanced_binary_vqa,
-                                <br> author = {Peng Zhang and Yash Goyal and Douglas Summers{-}Stay and Dhruv Batra and Devi Parikh},
-                                <br> title = {{Y}in and {Y}ang: Balancing and Answering Binary Visual Questions},
-                                <br> booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
-                                <br> year = {2016},
-                                <br> }
-                            </p>
-                        </div>
+                        <a href="https://www.linkedin.com/in/houdong-hu-08334227"><img src="./static/eccv2022/img/Houdong_profile.png" target="_blank" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Houdong Hu
+                            <br>Microsoft</p>
                     </div>
-                    <div class="large-10 columns">
-                        <img src="./static/img/yinyang.png" width="400" height="400" style="display:block; margin:auto; margin-left: 180px;" frameBorder="0">
-                    </div>
-                    <!-- <hr> -->
-                </div>
-                <div class="large-12 columns">
-                    <h1 style="font-size:20px; color:grey; font-weight: 200;" align=left></h1>
-                    <p style="font-size:20px; font-weight: 200;" align=justify>VQA: Visual Question Answering (ICCV 2015)</p>
-                    <br>
                     <div class="large-2 columns">
-                        <a href="http://arxiv.org/pdf/1505.00468.pdf" onClick="ga('send', 'event', { eventCategory: 'ICCV2015 Paper Download', eventAction: 'Paper', eventLabel: 'ICCV2015_Paper'});"><img src="./static/img/paper_vqa.png" style="border : 2px solid #b3b3b3; border-radius : 0px; height: 200px;"></a>
-                        <br>
-                        <br>
-                        <p style="font-size:15px; font-weight: 200;" align=justify>Download the <a href="http://arxiv.org/pdf/1505.00468.pdf" onClick="ga('send', 'event', { eventCategory: 'ICCV2015 Paper Download', eventAction: 'Paper', eventLabel: 'ICCV2015_Paper'});">paper</a></p>
-                        <p id="bibtex3" style="font-size:15px; font-weight: 200;" align=justify><a href="#" onclick="document.getElementById('bibtex31').style.display='block'; document.getElementById('bibtex3').style.display='none'; return false;">BibTeX</a></p>
-                        <div style="display: none;" id="bibtex31">
-                            <p style="font-size:12px; font-weight: 200; width:150%;">
-                                @InProceedings{{VQA},
-                                <br> author = {Stanislaw Antol and Aishwarya Agrawal and Jiasen Lu and Margaret Mitchell and Dhruv Batra and C. Lawrence Zitnick and Devi Parikh},
-                                <br> title = {{VQA}: {V}isual {Q}uestion {A}nswering},
-                                <br> booktitle = {International Conference on Computer Vision (ICCV)},
-                                <br> year = {2015},
-                                <br> }
-                            </p>
-                        </div>
+                        <a href="https://www.microsoft.com/en-us/research/people/zliu/"><img src="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/03/avatar_user__1490216903-360x360.jpg" target="_blank" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Zicheng Liu
+                            <br>Microsoft</p>
                     </div>
-                    <div class="large-10 columns">
-                        <img src="./static/img/teaser_small.jpg" width="1200" height="2200" style="display:block; margin:auto;" frameBorder="0">
+                    <div class="large-2 columns">
+                        <a href="https://hliu.cc/"><img src="./static/eccv2022/img/haotian-circle.jpg" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Haotian Liu
+                            <br>Univ. of Wisconsin at Madison</p>
                     </div>
+                    <div class="large-2 columns">
+                        <a href="https://liunian-harold-li.github.io/"><img src="https://liunian-harold-li.github.io/img/harold_cropped.jpeg" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Liunian Li
+                            <br>UCLA</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-1 columns">
+                        <p></p>
+                    </div>
+                    <div class="large-1 columns">
+                        <p></p>
+                    </div>
+                    <div class="large-2 columns">
+                        <a href="http://web.cs.ucla.edu/~kwchang"><img src="./static/eccv2022/img/kaiwei-circle.jpg" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Kai-Wei Chang
+                            <br>UCLA</p>
+                    </div>
+                    <div class="large-2 columns">
+                        <a href="https://www.microsoft.com/en-us/research/people/jfgao/"><img src="https://www.microsoft.com/en-us/research/uploads/prod/2020/09/20191101_170350330_iOS-4.jpg" class="home_team_picture style=" width="100" height="100" ;>
+                            <br>
+                        </a>
+                        <p style="font-weight: 200;">Jianfeng Gao
+                            <br>Microsoft</p>
+                    </div>
+                    <hr>
                 </div>
             </div>
-            <hr>
-            <div class="row">
-                <div class="large-12 columns">
-                    <h1 style="font-size:30px; color:grey; font-weight: 200;" align=left>Videos</h1>
-                    <div class="auto-resizable-iframe">
-                        <div class="large-2 columns" style="margin-left: 0px; left: -250px; width: 400px;">
-                            <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/nMr_sSAMpkE"></iframe>
-                        </div>
-                        <div class="large-2 columns" style="margin-left: -250px; left: -54px; width: 400px;">
-                            <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/gar88i-V0RE"></iframe>
-                        </div>
-                        <div class="large-2 columns" style="margin-left: -350px; left: 200px; width: 400px;">
-                            <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/Qw4tqz1diM4"></iframe>
-                        </div>
+        </div>
+
+        <div class="row">
+            <h1 style="font-size:30px; color:grey; font-weight: 200">Challenge Organizers (TBD)</h1>
+            <div class="team" id="people">
+                <div class="row">
+                    <div class="large-1 columns">
+                        <p></p>
                     </div>
+                    <div class="large-1 columns">
+                        <p></p>
+                    </div>
+                    
+                    <hr>
                 </div>
             </div>
-            <hr>
-            <div class="row">
-                <div class="large-12 columns">
-                    <h1 style="font-size:30px; color:grey; font-weight: 200">Feedback</h1>
-                    <div class="large-12 columns" style="text-align:left;">
-                        <p style="font-size:18px; font-weight: 200;">
-                            Any feedback is very welcome! Please send it to <a href="mailto:visualqa@gmail.com" target="_top">visualqa@gmail.com</a>.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        </div>
+        <!-- <div class="row">
+            <h1 style="font-size:30px; color:grey; font-weight: 200">Sponsors</h1>
+            <p style="font-size:15px; font-weight: 400; text-align:left">
+            This work is supported by grants awarded to Dhruv Batra and Devi Parikh.
+            </p>
+        </div> -->
+
+        <!-- <hr> -->
+        <div class="large-12 columns" style="background: white;">
+            <p style="color:black; text-align:center; display:block; margin-top:7px;">Workshop and Challenge Questions?
+                <br>
+                Email: <a href="eccv2022cvinw@outlook.com" target="_top">eccv2022cvinw@outlook.com</a>
+                <br>
+                Workshop Organizing Team
+            </p>
         </div>
     </section>
     <script>
-    var button = document.getElementById('March'); // Assumes element with id='button'
-    button.onclick = function() {
-        var div = document.getElementById('hiddenText11');
-        var div1 = document.getElementById('hiddenText12');
-        var div2 = document.getElementById('hiddenText13');
-        var div3 = document.getElementById('hiddenText14');
-        if (div.style.display !== 'none') {
-            $("#plus1").html("&#8853");
-            div.style.display = 'none';
-            div1.style.display = 'none';
-            div2.style.display = 'none';
-            div3.style.display = 'none';
-        } else {
-            $("#plus1").html("&#8854");
-            div.style.display = 'block';
-            div1.style.display = 'block';
-            div2.style.display = 'block';
-            div3.style.display = 'block';
-        }
-    };
-    </script>
-    <script>
-    var button = document.getElementById('October'); // Assumes element with id='button'
-    button.onclick = function() {
-        var div = document.getElementById('hiddenText21');
-        var div1 = document.getElementById('hiddenText22');
-        var div2 = document.getElementById('hiddenText23');
-        var div3 = document.getElementById('hiddenText24');
-        if (div.style.display !== 'none') {
-            $("#plus2").html("&#8853");
-            div.style.display = 'none';
-            div1.style.display = 'none';
-            div2.style.display = 'none';
-            div3.style.display = 'none';
-        } else {
-            $("#plus2").html("&#8854");
-            div.style.display = 'block';
-            div1.style.display = 'block';
-            div2.style.display = 'block';
-            div3.style.display = 'block';
-        }
-    };
-    </script>
-    <script>
-    var button = document.getElementById('July'); // Assumes element with id='button'
-    button.onclick = function() {
-        var div = document.getElementById('hiddenText3');
-        if (div.style.display !== 'none') {
-            $("#plus3").html("&#8853");
-            div.style.display = 'none';
-        } else {
-            $("#plus3").html("&#8854");
-            div.style.display = 'block';
-        }
-    };
-    </script>
-    <script>
-    var button2 = document.getElementById('June'); // Assumes element with id='button'
-
-    button2.onclick = function() {
-        var div = document.getElementById('hiddenText4');
-        if (div.style.display !== 'none') {
-            $("#plus4").html("&#8853");
-            div.style.display = 'none';
-        } else {
-            $("#plus4").html("&#8854");
-            div.style.display = 'block';
-        }
-    };
+    $(document).foundation();
     </script>
     <script>
     (function(i, s, o, g, r, a, m) {
@@ -489,11 +1228,6 @@
 
     ga('create', 'UA-63638588-1', 'auto');
     ga('send', 'pageview');
-    </script>
-    <script src="./static/js/foundation.js"></script>
-    <script src="./static/js/foundation.dropdown.js"></script>
-    <script>
-    $(document).foundation();
     </script>
     <!-- jquery smooth scroll to id's -->
     <script>
