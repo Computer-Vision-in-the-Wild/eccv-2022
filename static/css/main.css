@@ -11,8 +11,9 @@
 
 header {
     background-size: 100%;
-    background-image: url("../img/crop.png");
-    padding: 12px 0;
+    /* background-image: url("../img/crop.png"); */
+    background-image: url("../img/crop_3.png");
+    padding: 82px 0;
     position: relative;
     top: 0px;
 }

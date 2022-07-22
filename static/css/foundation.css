@@ -4958,7 +4958,9 @@ label.error {
 }
 
 .top-bar.expanded .title-area {
-    background: #111111;
+    /* background: #111111; */
+    background: rgba(17, 17, 17, 0.067);
+
 }
 
 .top-bar.expanded .toggle-topbar a {
