@@ -9,15 +9,20 @@
     text-decoration: underline;
 }
 
-header {
+/* header {
     background-size: 100%;
-    /* background-image: url("../img/crop.png"); */
     background-image: url("../img/crop_3.png");
     padding: 82px 0;
     position: relative;
     top: 0px;
+} */
+header{
+    background-image:url(../img/PreviewImage.png);
+    height:200px;
+    background-repeat:repeat;
+    background-position:right center;
+    background-size: auto 100%;
 }
-
 .unilist li {
     list-style: none;
     line-height: 1.5em;
