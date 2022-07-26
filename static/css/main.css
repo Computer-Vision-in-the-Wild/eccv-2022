@@ -12,9 +12,12 @@
 header {
     background-size: 100%;
     background-image:url(../img/eccv_2022_cvinwild_header.png);
-    padding: 200px 0;
+    padding: 155px;
     position: relative;
+    background-repeat:no-repeat;
+    background-position:center;
     top: 0px;
+    height:500px;
 }
 /* header{
     background-image:url(../img/PreviewImage.png);
