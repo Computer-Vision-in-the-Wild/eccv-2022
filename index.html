@@ -118,7 +118,7 @@
         <div class="row">
             <p style="font-size:50px; color:black; font-weight: 50" align=center>Workshop on Computer Vision in the Wild
                 <br>
-                <span style="font-size:30px; color:gray; font-weight: 50" align=center>at ECCV 2022, October 23</span>
+                <span style="font-size:30px; color:gray; font-weight: 50" align=center>@ ECCV 2022, October 23</span>
                 <!-- <br> -->
                 <!-- <br> -->
                 <!-- <span style="font-size:20px; color:black; font-weight: 400" align=center>Zoom and Gatherly links on ECCV 2022 website: <a target="_blank" href="https://www.eventscribe.net/2021/2021CVPR/agenda.asp?startdate=6/19/2021&enddate=6/19/2021&BCFO=M&pfp=Workshops&mode=&tn=&cpftwo=&custwo=&pta=/">Link</a> <br> Navigate to: Workshops -> Sat, October 23 -> Search for "Computer Vision in the Wild" workshop entry</b></span> -->
@@ -194,13 +194,55 @@
             <h1 style="font-size:30px; color:grey; font-weight: 200">Overview</h1>
             <div class="large-12 columns" style="text-align:left;">
                 <p style="font-size:15px; font-weight: 400; text-align:left">
-                State-of-the-art CV systems are trained to predict a fixed set of predetermined object categories. This restricted form of supervision limits their generality and usability since additional labeled data is needed to specify any other visual concept. 
+                State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories. This restricted form of supervision limits their generality and usability since additional labeled data is needed to specify any other visual concept. 
                 <br><br>
-                Recent works, such as <a href="https://openai.com/blog/clip/"> CLIP </a>, <a href="https://ai.googleblog.com/2021/05/align-scaling-up-visual-and-vision.html"> ALIGN </a> and <a href="https://arxiv.org/abs/2111.11432"> Florence </a>  for image classification, and <a href="https://arxiv.org/abs/2104.13921"> ViLD </a>, <a href="https://arxiv.org/abs/2112.09106"> RegionCLIP </a> and <a href="https://arxiv.org/abs/2112.03857"> GLIP </a> for object detection, show that learning from large-scale image-text data is a promising approach to achieve open-vocabulary CV models. These vision models with language interface also show superior zero-shot and few-shot adaption performance on various real-world tasks.
+                Recent works show that learning from large-scale image-text data is a promising approach to building transferable visual models that can effortlessly adapt to a wide range of downstream computer vision (CV) and  multimodal (MM) tasks. For example, 
+                <a href="https://openai.com/blog/clip/"> CLIP </a>, <a href="https://ai.googleblog.com/2021/05/align-scaling-up-visual-and-vision.html"> ALIGN </a> and <a href="https://arxiv.org/abs/2111.11432"> Florence </a>  for image classification,  
+                <a href="https://arxiv.org/abs/2104.13921"> ViLD </a>, <a href="https://arxiv.org/abs/2112.09106"> RegionCLIP </a> and <a href="https://arxiv.org/abs/2112.03857"> GLIP </a> for object detection.  
+                These vision models with language interface are naturally open-vocabulary recogntion models, showing superior zero-shot and few-shot adaption performance on various real-world scenarios. 
                 <br><br>
-                We propose this "Computer Vision in the Wild" workshop, aiming to gather academic and industry communities to work on CV problems in real-world scenarios, focusing on the challenge of open vocabulary vision tasks and efficient domain adaption. 
+                We propose this "Computer Vision in the Wild" workshop, aiming to gather academic and industry communities to work on CV problems in real-world scenarios, focusing on the challenge of open-set/domain visual recognition and efficient task-level transfer. 
+                Since there is no established benchmarks to measure the progress of "CV in the Wild", we develop new benchmarks for image classification and object detection, to measure the task-level transfer ablity of various models/methods over diverse real-world datasets, in terms of both prediction accuracy and adaption efficiency. This workshop will also host two challenges based on the benchmarks.
+                </p>
+            </div>
+        </div>
+<!--  -->
+
+<div class="row">
+    <h1 style="font-size:30px; color:grey; font-weight: 200">Call for Papers</h1>
+    <div class="large-12 columns" style="text-align:left;">
+        <p style="font-size:15px; font-weight: 400; text-align:left">
+            <ul style="font-size:15px;">
+                Topics of interest include but are not limited to:
+            
+                <li style="margin-left:30px">
+                    Open-set visual recognition methods, including classification, object detection, segmentation in images and videos
+                </li>
+                <li style="margin-left:30px">
+                    Unified neural networks architecutres and training objectives over different CV & MM tasks
+                </li>
+                <li style="margin-left:30px">
+                    Large-scale pre-training, with images/videos only, image/video-text pairs, and external knoweldge 
+                </li>
+                <li style="margin-left:30px">
+                    Efficient large visual model adaptation methods, measured by #training samples (zero-shot and few-shot), #trainable parameter, throughput, training cost
+                </li>                
+                <li style="margin-left:30px">
+                    New metrics / benchmarks / datasets to evaluate task-level transfer and open-domain visual recognition
+                </li>            
+
+                <br>
+                We accept abstract submissions to our workshop. All submissions shall have maximally 8 pages (excluding references) following the ECCV 2022 author guidelines. All submissions will be reviewed by the Program Committee on the basis of technical quality, relevance to scope of the conference, originality, significance, and clarity.
                 <br><br>
-                Since there is no established benchmarks to measure the progress of "CV in the wild", we develop two new benchmarks for: 1) classification and 2) detection, to measure the adaption efficiency of various models/methods over diverse real-world datasets. This workshop will host two challenges, based on these two benchmarks, respectively.
+                Submission Portal: <a href="https://cmt3.research.microsoft.com/CVinW2022"> [CMT] </a>
+                <br><br>
+            </ul>    
+        </p>
+    </div>
+</div>
+
+
+
                 <!--  -->
                 <div class="row">
                     <h1 style="font-size:30px; color:grey; font-weight: 200">CV in the Wild Challenges</h1>
@@ -208,15 +250,82 @@
                         <p style="font-size:15px; font-weight: 400; text-align:left">          
                 <!--  -->
                 <ul style="font-size:15px;"> 
-                    There are two challenges associated to this workshop: "Image Classification in the Wild" (ICinW) and "Object Detection in the Wild" (ODinW). We summarize their evaluation datasets and metrics in the table below.<br><br>
-                    <li style="margin-left:30px">
-                        To prevent a race purely in pre-training data and model size, we will have two tracks in both challenges.
-                    </li>
-                    <br>
+                There are two challenges associated with this workshop: "Image Classification in the Wild" (ICinW) and "Object Detection in the Wild" (ODinW). We summarize their evaluation datasets and metrics in the table below.<br><br>
+                    <table width="80%">
+                        <tr>
+                            <td width=50>
+                                <center> <span style="color:gray;"><b>Challenge</b></span> <br>
+                                    <!-- Recording: <a target="_blank" href="https://youtu.be/L-86t1AW3z4">[Video]</a> </center> -->
+                            </td>
+                            <td width=100>
+                                <center> <span style="color:gray;"><b>Eval Datasets</b></span> <br>
+                            </td>
+                            <td width=200>
+                                <center> <span style="color:gray;"><b>Eval Metrics</b></span> <br>
+                            </td>
+                            <!-- <td width=150>
+                                <center> <span style="color:gray;"><b>Pretraining data*</b></span> <br>
+                            </td> -->
+                        </tr>
+                        <tr>
+                            <td width=150>
+                                <center> <span><b>ICinW</b></span></center>
+                            </td>
+                            <td width=150>
+                                <center> <span><b>20 Image Classification Datasets</b></span></center>
+                            </td>
+                            <td width=150>
+                                <center> <span><b>Averaged scores in zero, few, full-shot settings</b></span></center>
+                            </td>
+                            <!-- <td width=150>
+                                <center> <span><b>ImageNet21k+CC15M</b></span></center>
+                            </td> -->
+                            <!-- <td style="padding-left:8px"><b>Live QA-1</b>
+                            </td> -->
+                            <!-- <td style="padding-left:8px"><b>Live QA-1</b>
+                            </td>
+                            <td width=200>
+                                Starts June 19, 12 PM PT!
+                            </td>
+                            <td width=200>
+                                Starts June 19, 9 AM PT!
+                            </td> -->
+                        </tr>
+                        <tr>
+                            <td width=150>
+                                <center> <span><b>ODinW</b></span></center>
+                            </td>
+                            <td width=150>
+                                <center> <span><b>35 Object Detection Datasets</b></span></center>
+                            </td>
+                            <td width=150>
+                                <center> <span><b>Averaged scores in zero, few, full-shot settings</b></span></center>
+                            </td>
+                            <!-- <td width=150>
+                                <center> <span><b>Objects365+CC15M</b></span></center>
+                            </td> -->
+                        </tr>
+                        <!-- <tr>
+                            <td width=150>
+                            </td>
+                            <td style="padding-left:8px"><b>Live QA-2</b>
+                                <br>Individual live QA for challenge related talks and poster spotlight presenters.
+                                <br>Hosted on Gatherly, joining link on the internal CVPR website
+                              </td>
+                              <td width=200>
+                                  Starts June 20, 12 AM PT!
+                              </td> -->
+                        </tr>
+                    </table>
+                    
+                   
+                    To prevent a race purely in pre-training data and model size, we will have two tracks.
+                    
+                    
                     <li style="margin-left:30px">
                         For the academic track, pre-training data is limited to ImageNet21k, Objects365, CC15M, and YFCC15M
                     </li>
-                    <br>
+                    
 
                     <li style="margin-left:30px">
                         For the industry track, there is no limitation on pre-training data and model size. Teams are required to disclose meta info of model and data if extra data is used.
@@ -228,98 +337,13 @@
                      <a href="https://arxiv.org/abs/2204.08790"> [Document] </a>.
                           Our evaluation server will be online at late July, 2022.
                     <br><br>
-                    Evaluation datasets and metrics for two challenges. *Pre-training data for the academic track, beyond which meta information of extra data should be disclosed.
 
                 </p>
             </div>
             <!-- <hr> -->
         </div>
 <!--  -->
-<table width="100%">
-    <tr>
-        <td width=150>
-            <center> <span style="color:gray;"><b>Challenge</b></span> <br>
-                <!-- Recording: <a target="_blank" href="https://youtu.be/L-86t1AW3z4">[Video]</a> </center> -->
-        </td>
-        <td width=150>
-            <center> <span style="color:gray;"><b>Eval Datasets</b></span> <br>
-        </td>
-        <td width=150>
-            <center> <span style="color:gray;"><b>Eval Metrics</b></span> <br>
-        </td>
-        <td width=150>
-            <center> <span style="color:gray;"><b>Pretraining data*</b></span> <br>
-        </td>
-    </tr>
-    <tr>
-        <td width=150>
-            <center> <span><b>ICinW</b></span></center>
-        </td>
-        <td width=150>
-            <center> <span><b>20 IC Datasets</b></span></center>
-        </td>
-        <td width=150>
-            <center> <span><b>Averaged n-shot scores</b></span></center>
-        </td>
-        <td width=150>
-            <center> <span><b>ImageNet21k+CC15M</b></span></center>
-        </td>
-        <!-- <td style="padding-left:8px"><b>Live QA-1</b>
-        </td> -->
-        <!-- <td style="padding-left:8px"><b>Live QA-1</b>
-        </td>
-        <td width=200>
-            Starts June 19, 12 PM PT!
-        </td>
-        <td width=200>
-            Starts June 19, 9 AM PT!
-        </td> -->
-    </tr>
-    <tr>
-        <td width=150>
-            <center> <span><b>ODinW</b></span></center>
-        </td>
-        <td width=150>
-            <center> <span><b>35 OD Datasets</b></span></center>
-        </td>
-        <td width=150>
-            <center> <span><b>Averaged n-shot scores</b></span></center>
-        </td>
-        <td width=150>
-            <center> <span><b>Objects365+CC15M</b></span></center>
-        </td>
-    </tr>
-    <!-- <tr>
-        <td width=150>
-        </td>
-        <td style="padding-left:8px"><b>Live QA-2</b>
-            <br>Individual live QA for challenge related talks and poster spotlight presenters.
-            <br>Hosted on Gatherly, joining link on the internal CVPR website
-          </td>
-          <td width=200>
-              Starts June 20, 12 AM PT!
-          </td> -->
-    </tr>
-</table>
-<!--  -->
 
-<div class="row">
-    <h1 style="font-size:30px; color:grey; font-weight: 200">Call for Papers</h1>
-    <div class="large-12 columns" style="text-align:left;">
-        <p style="font-size:15px; font-weight: 400; text-align:left">          
-
-<ul style="font-size:15px;">
-    The CV in the Wild workshop aims to bring together practitioners and researchers with a specific focus on the challenge of open vocabulary vision tasks and efficient domain adaption.
-    Both theoretical and experimental submissions are encouraged. 
-    Papers should elaborate on model pre-training and adaptation methods with multimodal data. Topics of interest include but are not limited to:
-
-    <br><br>
-    We accept abstract submissions to our workshop. All submissions shall have maximally 4 pages (excluding references) following the ECCV 2022 author guidelines. All submissions will be reviewed by the Program Committee on the basis of technical quality, relevance to scope of the conference, originality, significance, and clarity.
-    <br><br>
-    Submission Portal: <a href="https://cmt3.research.microsoft.com/CVinW2022"> CMT </a>
-</div>
-<!-- <hr> -->
-</div>
 <!--  -->
         <div class="row">
             <h1 style="font-size:30px; color:grey; font-weight: 200">Dates</h1>
@@ -1004,7 +1028,20 @@
                     <div class="large-1 columns">
                         <p></p>
                     </div> -->
-
+                    <div class="large-1 columns">
+                        <a href="https://www.linkedin.com/in/houdong-hu-08334227"><img src="./static/eccv2022/img/Houdong_profile.png" target="_blank" class="home_team_picture style=" width="75" height="75" ;>
+                            <br><br>
+                        </a>
+                        <p style="font-size:12px; font-weight: 200;">Houdong Hu
+                            <br>Microsoft</p>
+                    </div>
+                    <div class="large-1 columns">
+                        <a href="https://www.microsoft.com/en-us/research/people/zliu/"><img src="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/03/avatar_user__1490216903-360x360.jpg" target="_blank" class="home_team_picture style=" width="75" height="75" ;>
+                            <br><br>
+                        </a>
+                        <p style="font-size:12px; font-weight: 200;">Zicheng Liu
+                            <br>Microsoft</p>
+                    </div>
                     <div class="large-1 columns">
                         <a href="http://people.csail.mit.edu/celiu/"><img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=j7MW4iYAAAAJ&citpid=8" target="_blank" class="home_team_picture style=" width="75" height="75" ;>
                             <br><br>
@@ -1020,6 +1057,20 @@
                         <p style="font-size:12px; font-weight: 200;">Xuedong Huang
                             <br>Microsoft</p>
                     </div>
+                    <div class="large-1 columns">
+                        <a href="http://web.cs.ucla.edu/~kwchang"><img src="./static/eccv2022/img/kaiwei-circle.jpg" class="home_team_picture style=" width="75" height="75" ;>
+                            <br><br>
+                        </a>
+                        <p style="font-size:12px; font-weight: 200;">Kai-Wei Chang
+                            <br>UCLA</p>
+                    </div>
+                    <div class="large-1 columns">
+                        <a href="https://www.microsoft.com/en-us/research/people/jfgao/"><img src="https://www.microsoft.com/en-us/research/uploads/prod/2020/09/20191101_170350330_iOS-4.jpg" class="home_team_picture style=" width="75" height="75" ;>
+                            <br><br>
+                        </a>
+                        <p style="font-size:12px; font-weight: 200;">Jianfeng Gao
+                            <br>Microsoft</p>
+                    </div>                       
                     <hr>
                 </div>
             </div>
@@ -1180,20 +1231,7 @@
                         <br>Microsoft</p>
             </div>
         <!--  -->
-            <div class="large-1 columns">
-                <a href="https://www.linkedin.com/in/houdong-hu-08334227"><img src="./static/eccv2022/img/Houdong_profile.png" target="_blank" class="home_team_picture style=" width="75" height="75" ;>
-                    <br><br>
-                </a>
-                <p style="font-size:12px; font-weight: 200;">Houdong Hu
-                    <br>Microsoft</p>
-            </div>
-            <div class="large-1 columns">
-                <a href="https://www.microsoft.com/en-us/research/people/zliu/"><img src="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/03/avatar_user__1490216903-360x360.jpg" target="_blank" class="home_team_picture style=" width="75" height="75" ;>
-                    <br><br>
-                </a>
-                <p style="font-size:12px; font-weight: 200;">Zicheng Liu
-                    <br>Microsoft</p>
-            </div>
+
             <div class="large-1 columns">
                 <a href="https://hliu.cc/"><img src="./static/eccv2022/img/haotian-circle.jpg" class="home_team_picture style=" width="75" height="75" ;>
                     <br><br>
@@ -1208,22 +1246,8 @@
                 <p style="font-size:12px; font-weight: 200;">Liunian Li
                     <br>UCLA</p>
             </div>
-            <div class="large-1 columns">
-                <a href="http://web.cs.ucla.edu/~kwchang"><img src="./static/eccv2022/img/kaiwei-circle.jpg" class="home_team_picture style=" width="75" height="75" ;>
-                    <br><br>
-                </a>
-                <p style="font-size:12px; font-weight: 200;">Kai-Wei Chang
-                    <br>UCLA</p>
-            </div>
-            <div class="large-1 columns">
-                <a href="https://www.microsoft.com/en-us/research/people/jfgao/"><img src="https://www.microsoft.com/en-us/research/uploads/prod/2020/09/20191101_170350330_iOS-4.jpg" class="home_team_picture style=" width="75" height="75" ;>
-                    <br><br>
-                </a>
-                <p style="font-size:12px; font-weight: 200;">Jianfeng Gao
-                    <br>Microsoft</p>
-            </div>   
-            <div class="row">
-            </div>
+            <!-- <div class="row">
+            </div> -->
                 <div class="large-1 columns">
                     <a href="https://scholar.google.com/citations?hl=zh-CN&user=1vz0kKUAAAAJ&view_op=list_works&sortby=pubdate"><img src="https://media-exp1.licdn.com/dms/image/C5603AQHrGMQQiwJC7w/profile-displayphoto-shrink_400_400/0/1561582656147?e=1663804800&v=beta&t=j7gTbLwYa8oNcpZecCUW841a3Z7J7Ogd0XyTL0qAYYA" class="home_team_picture style=" width="75" height="75" ;>
                         <br><br>
@@ -1243,7 +1267,7 @@
 </div>
 <!-- Challenge Organizers -->
 <div class="row">
-    <h1 style="font-size:30px; color:grey; font-weight: 200">Challenge Organizers</h1>
+    <h1 style="font-size:30px; color:grey; font-weight: 200">Challenge Organizers (TBD)</h1>
     <div class="team" id="people">
         <div class="row">
             <div class="large-1 columns">
@@ -1253,13 +1277,13 @@
                 <p style="font-size:12px; font-weight: 200;">Yinfei Yang 
                     <br>Apple</p>
             </div>
-            <div class="large-1 columns">
+            <!-- <div class="large-1 columns">
                 <a href="https://www.linkedin.com/in/chao-jia-6157ba14/ "><img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=VCgDrQsAAAAJ&citpid=3" class="home_team_picture style=" width="75" height="75" ;>
                     <br><br>
                 </a>
                 <p style="font-size:12px; font-weight: 200;">Chao Jia
                     <br>Waymo</p>
-            </div>
+            </div> -->
             <div class="large-1 columns">
                 <a href="https://www.linkedin.com/in/yi-ting-chen-google/ "><img src="https://media-exp1.licdn.com/dms/image/C5603AQEVUanerXnP6Q/profile-displayphoto-shrink_400_400/0/1655777497160?e=1663804800&v=beta&t=rUyQTbYbJsDX65VFP7LgVlr63TG_TkgA4fW0ZtHrkeA" class="home_team_picture style=" width="75" height="75" ;>
                     <br><br>
@@ -1333,13 +1357,14 @@
                     <p style="font-size:12px; font-weight: 200;">Chen-Yu Lee 
                         <br>Google</p>
                 </div>
-                <!-- <div class="large-1 columns">
-                    <a href="https://chunliangli.github.io"><img src="https://media-exp1.licdn.com/dms/image/C4E03AQG3kOloptyXaw/profile-displayphoto-shrink_400_400/0/1516885291151?e=1663804800&v=beta&t=7tGy9QRO0P55ntCKTHha72WtJQQ2CWHk2gh0Usa9c-I" class="home_team_picture style=" width="75" height="75" ;>
+                 <div class="large-1 columns">
+                    <a href="https://houwenpeng.com/"><img src="https://www.microsoft.com/en-us/research/uploads/prod/2019/07/Houwen_Peng_360x360-5d1ce02ab189f.jpg" class="home_team_picture style=" width="75" height="75" ;>
                         <br><br>
                     </a>
-                    <p style="font-size:12px; font-weight: 200;">Chun-Liang Li
-                        <br>Google</p>
+                    <p style="font-size:12px; font-weight: 200;">Houwen Peng
+                        <br>MSRA</p>
                 </div>
+                <!--
                 <div class="large-1 columns">
                     <a href="https://chunliangli.github.io"><img src="https://media-exp1.licdn.com/dms/image/C4E03AQG3kOloptyXaw/profile-displayphoto-shrink_400_400/0/1516885291151?e=1663804800&v=beta&t=7tGy9QRO0P55ntCKTHha72WtJQQ2CWHk2gh0Usa9c-I" class="home_team_picture style=" width="75" height="75" ;>
                         <br><br>
@@ -1354,7 +1379,7 @@
         <div class="large-12 columns" style="background: white;">
             <p style="color:black; text-align:center; display:block; margin-top:7px;">Workshop and Challenge Questions?
                 <br>
-                Email: <a href="eccv2022cvinw@outlook.com" target="_top">eccv2022cvinw@outlook.com</a>
+                Reach out: <a href="https://github.com/Computer-Vision-in-the-Wild/eccv-2022" target="_top">https://github.com/Computer-Vision-in-the-Wild/eccv-2022</a>
                 <br>
                 Workshop Organizing Team
             </p>
